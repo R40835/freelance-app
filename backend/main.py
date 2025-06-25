@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app import crud, schemas
+from backend import crud, schemas
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()

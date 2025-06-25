@@ -1,7 +1,7 @@
 from sqlalchemy.future import select
-from app.models import Customer
-from app.database import SessionLocal
-from app.schemas import CustomerCreate
+from backend.models import Customer
+from backend.database import SessionLocal
+from backend.schemas import CustomerCreate
 from typing import List
 
 
