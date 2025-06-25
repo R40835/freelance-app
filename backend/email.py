@@ -51,12 +51,13 @@ def send_email_notification(customer: Customer, is_customer: bool) -> None:
 
     msg = MIMEMultipart()
     msg['From'] = settings.SMTP_USERNAME
-    msg['Subject'] = f"New Customer: {customer.name}"
 
     if is_customer:
+        msg['Subject'] = "Your AzulWorkFlows Request Has Been Received"
         msg['To'] = customer.email
         body = customer_email(customer)
     else:
+        msg['Subject'] = f"New Customer: {customer.name}"
         msg['To'] = settings.ADMIN_EMAIL
         body = admin_email(customer)
 
